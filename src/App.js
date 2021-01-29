@@ -4,11 +4,11 @@ import Bitcoin from "./components/BitcoinNews";
 import Business from "./components/BusinessNews";
 import Home from "./components/Home";
 import BITCOIN from "./data/bitcoinSeed";
-import businessSeed from "./data/businessSeed";
+import BUSINESS from "./data/businessSeed";
 
 
 console.log(BITCOIN);
-consoel.log()
+console.log(BUSINESS);
 
 function App() {
 
@@ -39,11 +39,11 @@ function App() {
           </Route>
               
           <Route path={"/businessnews"}>
-            <Business />
+            <Business buisnessList={BUSINESS} />
           </Route>
 
           <Route path={"/bitcoinnews"}>
-            <Bitcoin />
+            <Bitcoin bitcoinList={BITCOIN} />
           </Route>  
         </Switch>
         

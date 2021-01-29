@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from "react";
-
+import BusinessList from "./BusinessList";
 
 //Remember to do yarn add dotenv 
 //.env file be in the root, not src folder
@@ -9,7 +9,7 @@ const API_KEY = `${process.env.REACT_APP_API_KEY}`;
 
 console.log(API_KEY)
 
-function BusinessNews() { 
+function BusinessNews(props) { 
   const [businessNews, setBusinessNews] = useState('');
 
 
@@ -24,10 +24,14 @@ function BusinessNews() {
   //   response()
   // }, []);
 
+  console.log(props)
 
 
   return (
-    <h1>Business</h1>
+    <div>
+      <h1>Business</h1>
+      <BusinessList list={props.buisnessList} />
+    </div>
   )
 }
 
