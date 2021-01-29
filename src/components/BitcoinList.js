@@ -9,7 +9,7 @@ function BitcoinList (props) {
     <ul>
       {
         props.list.map((article) => { 
-          return <li><a href={article.url}>{article.title}</a> by: {article.author}</li>
+          return <li><a href={article.url}>{article.title}</a> <span>by: {article.author}</span></li>
         })
       }
     </ul>

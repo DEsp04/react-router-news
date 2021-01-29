@@ -8,7 +8,7 @@ function BusinessList(props) {
     return (
       <ul>
         {
-          props.list.map((article) => (<li><a href={article.url}>{article.title}</a>by: {article.author}</li>))
+          props.list.map((article) => (<li><a href={article.url}>{article.title}</a> <span>by: {article.author}</span></li>))
 
         } 
       </ul>
