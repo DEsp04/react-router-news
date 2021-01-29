@@ -13,6 +13,14 @@ console.log(BUSINESS);
 function App() {
 
 
+
+
+
+
+
+  
+
+
   return (
     <div className="App">
       <nav>
@@ -39,11 +47,11 @@ function App() {
           </Route>
               
           <Route path={"/businessnews"}>
-            <Business buisnessList={BUSINESS} />
+            <Business  />
           </Route>
 
           <Route path={"/bitcoinnews"}>
-            <Bitcoin bitcoinList={BITCOIN} />
+            <Bitcoin  />
           </Route>  
         </Switch>
         

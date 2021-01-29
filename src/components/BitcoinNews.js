@@ -32,7 +32,7 @@ function BitcoinNews(props) {
   return (
     <div>
       <h1>Bitcoin News</h1>
-      <BitcoinList list={props.bitcoinList} />
+      <BitcoinList list="" />
     </div>
   )
 }

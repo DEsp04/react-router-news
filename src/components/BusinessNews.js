@@ -9,28 +9,30 @@ const API_KEY = `${process.env.REACT_APP_API_KEY}`;
 
 console.log(API_KEY)
 
-function BusinessNews(props) { 
-  const [businessNews, setBusinessNews] = useState('');
+function BusinessNews() { 
+  const [businessNews, setBusinessNews] = useState([]);
 
 
 
 
-  // useEffect(() => {
-  //   const response = async () => {
+  useEffect(() => {
+    const response = async () => {
 
-  //     const { data } = await axios.get(`${Business_URL}/v2/top-headlines?country=us&category=business&apiKey=${API_KEY}`);
+      const { data } = await axios.get(`${Business_URL}/v2/top-headlines?country=us&category=business&apiKey=${API_KEY}`);
 
-  //   }
-  //   response()
-  // }, []);
+      console.log(data.articles);
+      setBusinessNews(data.articles)
+    }
+    response()
+  },[]);
 
-  console.log(props)
+
 
 
   return (
     <div>
       <h1>Business</h1>
-      <BusinessList list={props.buisnessList} />
+      <BusinessList list={businessNews} />
     </div>
   )
 }
