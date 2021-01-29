@@ -3,15 +3,15 @@
 function BitcoinList (props) { 
 
 
-  
+  console.log(props.list.articles);
 
   return (
     <ul>
-      {/* {
-        props.list.articles.map(() => { 
-          return <li><a href=""></a></li>
+      {
+        props.list.map((article) => { 
+          return <li><a href={article.url}>{article.title}</a> by: {article.author}</li>
         })
-      } */}
+      }
     </ul>
   )
 }
